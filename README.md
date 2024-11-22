@@ -28,3 +28,26 @@ python main.py --model_name TGCN --max_epochs 3000 --learning_rate 0.001 --weigh
 You can also adjust the `--data`, `--seq_len` and `--pre_len` parameters.
 
 Run `tensorboard --logdir lightning_logs/version_0` to monitor the training progress and view the prediction results.
+
+
+## Обзор `examples`
+
+В папке `examples` находятся `.ipynb`, которые показывает следующие данные:
+
+1. **ARIMA.ipynb**
+    Хранит в себе 3 реализации предсказания трафика: `Ha`, `SVR`, `ARIMA`
+
+2. **graph clustering.ipynb**
+    Реализованы кластеризация Лувена и спектральная кластеризация для изучения параметов графа. Также проверяются такие данные, как `Betweenness`, `Closeness` и средняя скорость на узлах.
+
+3. **graph visualization.ipynb**
+    Реализованы график средней скорости на всем графе и направленный граф.
+
+4. **main_review.ipynb**
+    Реализованы кластерация Лувена, средняя скорость на кластерах и GIF-анимация изменения скорости на узлах графа с течением времени.
+
+5. **T-GCN.ipynb**
+    Собственная реализация `TGCN` из `torch_geometric_temporal`
+
+6. **traffic_prediction.ipynb**
+    Реализация использования модели `A3TGCN`
